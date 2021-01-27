@@ -1,0 +1,47 @@
+.toDoItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.5vh 3vw;
+    margin-bottom: 2vh;
+}
+.toDoItemWrapperCompleted {
+    border: 2px solid #ccc;
+    text-decoration: line-through;
+    color: #ccc;
+}
+.toDoItemWrapperIncompleted {
+    border: 2px solid mediumseagreen;
+}
+.toDoItemWrapper__completed {
+
+}
+.toDoItemWrapper__description {
+    text-align: center;
+}
+.toDoItemWrapper__priority {
+
+}
+.toDoItemOptionsWrapper {
+    display: flex;
+}
+.toDoItemOptionsWrapper__button {
+    padding: .5vh 1vw;
+    border-radius: 3px;
+}
+.toDoItemOptionsWrapper__editButton {
+    background-color: darkseagreen;
+    margin-right: 1.5vw;
+    cursor: pointer;
+}
+.toDoItemOptionsWrapper__editButtonInActive {
+    background-color: rgb(107, 122, 107);
+    margin-right: 1.5vw;
+}
+.toDoItemOptionsWrapper__deleteButton {
+    background-color: rgb(199, 92, 73);
+    cursor: pointer;
+}
+.toDoItemOptionsWrapper__deleteButtonInActive {
+    background-color: rgb(136, 92, 84);
+}

@@ -1,0 +1,33 @@
+.toDoCreatorWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 3vw;
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.toDoLabelWrapper {
+    margin-right: 3vw;
+}
+.toDoLabelWrapper > input {
+    border-color: #ccc;
+} 
+.toDoCreatorWrapper__optionsWrapper {
+    display: flex; 
+    flex-direction: column;
+    margin-right: 10vw;
+}
+.flexWrapper {
+    display: flex;
+    align-items: flex-end; justify-content: space-between;
+}
+.toDoLabelWrapper__description {
+    font-weight: bold;
+    color: mediumseagreen;
+}
+.toDoCreatorWrapper__addButton {
+    border: none;
+    border-radius: 3px;
+    background-color: mediumseagreen;
+    cursor: pointer;
+    padding: 1vh 1.5vw;
+}

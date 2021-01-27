@@ -1,0 +1,42 @@
+.toDoControllerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh 3vw;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.actionsWrapper, .filtersWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.actionsWrapper > * {
+    margin-bottom: 1vh;
+}
+.actionsWrapper__actionTitle, .filtersWrapper__filterTitle {
+    text-align: center;
+}
+.actionsWrapper__actionButton {
+    text-align: center;
+    border: none;
+    padding: 1vh 1.5vw; 
+    border-radius: 3px;
+    cursor: pointer;
+}
+.actionsWrapper__completeAll {
+    background-color: mediumseagreen;
+}
+.actionsWrapper__clearCompleted {
+    background-color: mediumspringgreen;
+}
+.filtersWrapper__filterType {
+    text-align: left;
+    cursor: pointer;
+}
+.filtersWrapper__filterType:hover {
+    color: mediumseagreen;
+}
+.filtersWrapper__activeFilter {
+    color: mediumseagreen; 
+}

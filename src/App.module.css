@@ -1,0 +1,20 @@
+.generalWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} 
+.toDoWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2vmin;
+  box-shadow: 0 0 5px #ccc;
+}
+.toDoItemsArea {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid mediumaquamarine; */
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
