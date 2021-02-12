@@ -13,7 +13,7 @@ class ToDoController extends React.Component {
         this.state = {
             totalAmount: this.props.toDos.length,
             filterType: this.props.filter,
-            filterButtons: this.buildFilterButtons()
+            filterButtons: this.buildFilterButtons(this.props.filter)
         } 
         this.actionHandler = this.actionHandler.bind(this);
         this.buildFilterButtons = this.buildFilterButtons.bind(this);
@@ -21,6 +21,7 @@ class ToDoController extends React.Component {
 
     // handle action buttons, checking if there's any toDos
     actionHandler(type) {
+        console.log("type: ", type);
         if (type === "clear" && this.state.totalAmount) {
             this.props.ACTION_clearCompleted();
         } else if (type === "complete" && this.state.totalAmount) {
@@ -33,16 +34,16 @@ class ToDoController extends React.Component {
         if (nextProps.filter !== this.state.filterType) {
             this.setState({
                 filterType: nextProps.filter,
-                filterButtons: this.buildFilterButtons()
-            }, console.log(this.state.filterButtons));
+                filterButtons: this.buildFilterButtons(nextProps.filter)
+            });
         }
     }
 
-    buildFilterButtons() {
+    buildFilterButtons(filterType) {
         let filterButtons = [];
         let activeFilter = "";
         for (let i = 0; i < this.props.filterTypes.length; i++) {
-            if (this.props.filterTypes[i] === this.props.filter) {
+            if (this.props.filterTypes[i] === filterType) {
                 activeFilter = toDoControllerStyles.filtersWrapper__activeFilter;
             }
             filterButtons.push(<div className={`${toDoControllerStyles.filtersWrapper__filterType} ${activeFilter}`}
@@ -65,10 +66,6 @@ class ToDoController extends React.Component {
                 <div className={toDoControllerStyles.filtersWrapper}>
                     <div className={toDoControllerStyles.filtersWrapper__filterTitle}>Фильтры:</div>
                     {this.state.filterButtons}
-                    {/* <div className={toDoControllerStyles.filtersWrapper__filterType} name="all" onClick={() => {this.props.FILTER_filterActionController("all")}}>Все</div>
-                    <div className={toDoControllerStyles.filtersWrapper__filterType} name="completed" onClick={() => {this.props.FILTER_filterActionController("completed")}}>Завершенные</div>
-                    <div className={toDoControllerStyles.filtersWrapper__filterType} name="incompleted" onClick={() => {this.props.FILTER_filterActionController("incompleted")}}>Незавершенные</div>
-                    <div className={toDoControllerStyles.filtersWrapper__filterType} name="priority" onClick={() => {this.props.FILTER_filterActionController("priority")}}>Приоритетные</div> */}
                 </div>
             </div>
         );

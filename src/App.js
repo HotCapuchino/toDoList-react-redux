@@ -2,11 +2,7 @@ import mainPageStyle from './App.module.css';
 import ToDoItem from './components/ToDoItem';
 import ToDoCreator from './components/ToDoCreator';
 import ToDoController from './components/ToDoController';
-import * as actionTypes from './redux/actions/actionTypes';
 import { useSelector } from 'react-redux';
-import store from './redux/store';
-
-store.dispatch({ type: actionTypes.ACTION_ADD_TO_DO, payload: { description: "ha", priority: true } });
 
 function App(props) {
   const selectToDos = state => state.toDos;
